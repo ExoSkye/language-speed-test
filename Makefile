@@ -1,4 +1,6 @@
 build:
+	mkdir bin/
+
 	as asm.s -o asm.o >/dev/null
 	ld asm.o -o bin/asm
 	rm asm.o
@@ -26,4 +28,4 @@ run:
 	sh execute.sh
 
 clean:
-	rm bin/*
+	rm -rf bin/
